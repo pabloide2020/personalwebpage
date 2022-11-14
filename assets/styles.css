@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+:root {
+    /* FONTS */
+    --primary-font: "Playfair Display";
+    --secondary-font: "Roboto";
+    --major-contrast-weight: 600;
+    --medium-contrast-weight: 500;
+
+    /* COLORS */
+    --background-color: #FCEFEF;
+    --blue: #6D8EF2;
+    --red: #CD4631;
+    --green: #7A9B76;
+    --yellow: #FCD0A1;
+    --gray: #717171;
+}
