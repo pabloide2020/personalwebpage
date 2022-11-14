@@ -1,16 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Roboto:wght@400;700&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-body {
-  overflow-x: hidden;
-}
-
 :root {
     /* FONTS */
     --primary-font: "Playfair Display";
@@ -25,4 +14,119 @@ body {
     --green: #7A9B76;
     --yellow: #FCD0A1;
     --gray: #717171;
+
+    --shadow:  5px 5px black;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3{
+    font-family: var(--primary-font);
+}
+
+p {
+    font-family: var(--secondary-font);
+    line-height: 1.5;
+}
+
+header {
+    /* display: flex; */
+    margin: .5rem .5rem;
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+
+.upper-note {
+    margin: 0 1rem;
+    font-size: 0.6rem;
+    color: black;
+    font-family: var(--secondary-font);
+    background-color: white;
+    padding: .25em;
+    box-shadow: var(--shadow);
+    border: 2px solid black;
+}
+
+.main-header {
+    margin-top: 4rem;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: var(--medium-contrast-weight);
+    color: var(--gray);
+}
+
+.main-header strong {
+    font-size: 3rem;
+    font-weight: var(--major-contrast-weight);
+    color: black;
+}
+
+strong span {
+    color: var(--blue);
+}
+
+.back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    z-index: -1;
+}
+
+header .act-buttons {
+    margin-top: 3rem;   
+}
+
+.act-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: .8em;
+}
+
+.act-buttons a {
+    background-color: var(--red);
+    color: white;
+    text-decoration: none;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    padding: .25em .5em;
+    font-family: var(--secondary-font);
+    font-size: 1.5rem;
+    box-shadow: var(--shadow);
+}
+
+.act-buttons img {
+    height: 70%;
+    margin-right: 5px;
+}
+
+.act-buttons a:nth-child(1) {
+    background-color: var(--red);
+    transform: rotate(-.5deg);
+    margin-bottom: 2rem;
+}
+
+.act-buttons a:nth-child(2) {
+    background-color: var(--green);
+    transform: rotate(1deg);
 }
