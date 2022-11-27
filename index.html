@@ -30,7 +30,7 @@
         <a href="#contact-form"
           ><img src="assets/imgs/e-mail.svg" alt="e-mail icon" />SIM EU QUERO</a
         >
-        <a href="#"
+        <a href="https://api.whatsapp.com/send?phone=5543991436064"
           ><img src="./assets/imgs/whatsapp.svg" alt="whatsapp icon" />SÓ SE FOR
           AGORA</a
         >
@@ -162,7 +162,7 @@
             ><img src="assets/imgs/e-mail.svg" alt="e-mail icon" />MANDAR
             E-MAIL</a
           >
-          <a href="#"
+          <a href="https://api.whatsapp.com/send?phone=5543991436064"
             ><img src="./assets/imgs/whatsapp.svg" alt="whatsapp icon" />FALE
             COMIGO</a
           >
@@ -219,7 +219,7 @@
             ><img src="assets/imgs/e-mail.svg" alt="e-mail icon" />MANDAR
             E-MAIL</a
           >
-          <a href="#"
+          <a href="https://api.whatsapp.com/send?phone=5543991436064"
             ><img src="./assets/imgs/whatsapp.svg" alt="whatsapp icon" />FALE
             COMIGO</a
           >
@@ -228,7 +228,7 @@
       <section class="process">
         <h2>PROCESSO</h2>
         <div class="step">
-          <div class="number">1</div>
+          <div class="number">01</div>
           <div class="text">
             <h3>Breafing</h3>
             <p>
@@ -241,7 +241,7 @@
           </div>
         </div>
         <div class="step">
-          <div class="number">2</div>
+          <div class="number">02</div>
           <div class="text">
             <h3>Construção</h3>
             <p>
@@ -254,7 +254,7 @@
           </div>
         </div>
         <div class="step">
-          <div class="number">3</div>
+          <div class="number">03</div>
           <div class="text">
             <h3>Hospedagem e Domínio</h3>
             <p>
@@ -266,7 +266,7 @@
           </div>
         </div>
         <div class="step">
-          <div class="number">4</div>
+          <div class="number">04</div>
           <div class="text">
             <h3>Seu site no ar</h3>
             <p>
@@ -280,53 +280,61 @@
       </section>
       <section class="send-email">
         <h2>ENTRE EM CONTATO</h2>
-        <form id="contact-form" action="https://formspree.io/f/xyyvowon" method="POST">
-          <label for="name">Nome*</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Seu nome"
-            required
-          />
-          <label for="mail">E-mail*</label>
-          <input
-            type="email"
-            name="mail"
-            id="mail"
-            placeholder="exemplo@email.com"
-            required
-          />
-          <label for="number">Número de telefone</label>
-          <input
-            type="text"
-            name="number"
-            id="numer"
-            placeholder="(00) 0000-0000"
-          />
-          <label for="message">Mensagem*</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder="Escreva sua mensagem aqui"
-            required
-          ></textarea>
-          <button type="submit">ENVIAR</button>
-        </form>
-        <div class="info">
-          <img class="letters" src="./assets/imgs/letter.jpg" alt="letters" />
-          <h3>
-            <img
-              src="./assets/imgs/e-mail.svg"
-              alt="e-mail"
-            />contato@pablodesenvolvimentoweb.com
-          </h3>
-          <h3>
-            <img src="./assets/imgs/whatsapp.svg" alt="whatsapp icon" />+55 (43)
-            99143-6064
-          </h3>
+        <div class="email-container">
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xyyvowon"
+            method="POST"
+          >
+            <label for="name">Nome*</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Seu nome"
+              required
+            />
+            <label for="mail">E-mail*</label>
+            <input
+              type="email"
+              name="mail"
+              id="mail"
+              placeholder="exemplo@email.com"
+              required
+            />
+            <label for="number">Número de telefone</label>
+            <input
+              type="text"
+              name="number"
+              id="numer"
+              placeholder="(00) 0000-0000"
+            />
+            <label for="message">Mensagem*</label>
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Escreva sua mensagem aqui"
+              required
+            ></textarea>
+            <button type="submit">ENVIAR</button>
+          </form>
+          <div class="info">
+            <img class="letters" src="./assets/imgs/letter.jpg" alt="letters" />
+            <div class="contact-container">
+              <h3>
+                <img
+                  src="./assets/imgs/e-mail.svg"
+                  alt="e-mail"
+                />contato@pablodesenvolvimentoweb.com
+              </h3>
+              <h3>
+                <img src="./assets/imgs/whatsapp.svg" alt="whatsapp icon" />+55
+                (43) 99143-6064
+              </h3>
+            </div>
+          </div>
         </div>
       </section>
       <section class="faq">
@@ -334,8 +342,12 @@
         <div class="faq-question">
           <div class="question">
             <h3>Como vai funcionar o pagamento?</h3>
-            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon">
-            <img class="minus" src="./assets/imgs/remove.svg" alt="minus icon">
+            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon" />
+            <img
+              class="minus"
+              src="./assets/imgs/remove.svg"
+              alt="minus icon"
+            />
           </div>
           <div class="answer">
             <p>
@@ -348,8 +360,12 @@
         <div class="faq-question">
           <div class="question">
             <h3>Quem que irá pagar a hospedagem e domínio?</h3>
-            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon">
-            <img class="minus" src="./assets/imgs/remove.svg" alt="minus icon">
+            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon" />
+            <img
+              class="minus"
+              src="./assets/imgs/remove.svg"
+              alt="minus icon"
+            />
           </div>
           <div class="answer">
             <p>
@@ -362,8 +378,12 @@
         <div class="faq-question">
           <div class="question">
             <h3>E sobre as fotos e textos que vão ser usados no site?</h3>
-            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon">
-            <img class="minus" src="./assets/imgs/remove.svg" alt="minus icon">
+            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon" />
+            <img
+              class="minus"
+              src="./assets/imgs/remove.svg"
+              alt="minus icon"
+            />
           </div>
           <div class="answer">
             <p>
@@ -376,8 +396,12 @@
         <div class="faq-question">
           <div class="question">
             <h3>Como vai funcionar a manuntenção do site?</h3>
-            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon">
-            <img class="minus" src="./assets/imgs/remove.svg" alt="minus icon">
+            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon" />
+            <img
+              class="minus"
+              src="./assets/imgs/remove.svg"
+              alt="minus icon"
+            />
           </div>
           <div class="answer">
             <p>
@@ -389,8 +413,12 @@
         <div class="faq-question">
           <div class="question">
             <h3>O prazo é de mais ou menos quanto tempo?</h3>
-            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon">
-            <img class="minus" src="./assets/imgs/remove.svg" alt="minus icon">
+            <img class="plus" src="./assets/imgs/plus.svg" alt="plus icon" />
+            <img
+              class="minus"
+              src="./assets/imgs/remove.svg"
+              alt="minus icon"
+            />
           </div>
           <div class="answer">
             <p>

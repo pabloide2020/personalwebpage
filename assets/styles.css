@@ -17,6 +17,8 @@
 
   --shadow: 5px 5px black;
   --border: 2px solid black;
+
+  --font-size-a: clamp(1.5rem, 2vw + 1rem, 2.5rem);
 }
 
 * {
@@ -55,11 +57,12 @@ header {
 
 .upper-note {
   margin: 0 1rem;
-  font-size: 0.6rem;
+  font-size: clamp(0.6rem, 1.5vw + 0.1rem, 1.5rem);
   color: black;
   font-family: var(--secondary-font);
   background-color: white;
   padding: 0.25em;
+  width: fit-content;
   box-shadow: var(--shadow);
   border: var(--border);
 }
@@ -74,13 +77,13 @@ header {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: clamp(1.9rem, 2vw + 1rem, 30rem);
   font-weight: var(--medium-contrast-weight);
   color: var(--gray);
 }
 
 .main-header strong {
-  font-size: 3rem;
+  font-size: clamp(2.65rem, 7vw + 1rem, 50rem);
   font-weight: var(--major-contrast-weight);
   color: black;
 }
@@ -118,7 +121,7 @@ header .act-buttons {
   align-items: center;
   padding: 0.25em 0.5em;
   font-family: var(--secondary-font);
-  font-size: 1.5rem;
+  font-size: var(--font-size-a);
   box-shadow: var(--shadow);
 }
 
@@ -208,6 +211,8 @@ main {
   box-shadow: var(--shadow);
   font-size: 1.5rem;
   font-weight: var(--major-contrast-weight);
+  width: fit-content;
+  margin-inline: auto;
 }
 
 .question2 h3 {
@@ -359,6 +364,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .guarantees h2 {
@@ -459,6 +465,7 @@ main {
 
 .process .number {
   margin-top: 2rem;
+  font-family: var(--secondary-font);
   font-size: 5rem;
   font-weight: 700;
 }
@@ -509,6 +516,7 @@ main {
   flex-direction: column;
   width: 95%;
   padding-bottom: 0.5em;
+  margin-inline: auto;
 }
 
 .send-email form label {
@@ -554,6 +562,13 @@ main {
   margin-bottom: 1.5rem;
 }
 
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 1em;
+}
+
 .info h3 {
   display: flex;
   align-items: center;
@@ -571,13 +586,14 @@ main {
   margin-top: 2rem;
 }
 
-.info h3:nth-child(2) {
+.info h3:nth-child(1) {
   background-color: var(--red);
 }
 
-.info h3:nth-child(3) {
+.info h3:nth-child(2) {
   background-color: var(--green);
-  margin-bottom: 2rem;
+  margin-top: 2rem;
+  width: fit-content;
 }
 
 .info h3 img {
@@ -631,12 +647,13 @@ main {
   overflow: hidden;
   font-family: var(--secondary-font);
   font-size: 0.8rem;
-  padding: .25em 0;
+  padding: 0.25em 0;
   color: black;
   display: none;
 }
 
-.plus, .minus {
+.plus,
+.minus {
   width: 1.25rem;
   flex-shrink: 0;
 }
@@ -681,4 +698,500 @@ footer {
   justify-content: center;
   padding: 1em;
   font-family: var(--secondary-font);
+}
+
+@media (min-width: 32.5em) {
+  :root {
+    --font-size-a: 1.4rem;
+  }
+
+  .act-buttons a:nth-child(1) {
+    margin-bottom: 0;
+    margin-right: 5%;
+    transform: rotate(-1deg);
+  }
+
+  .act-buttons a:nth-child(2) {
+    transform: rotate(2deg);
+  }
+
+  .question2 .cards {
+    width: min(60%, 30rem);
+  }
+
+  .reason-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .last-work .options {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .last-work .options a:nth-child(1) {
+    margin-bottom: 0;
+  }
+
+  .guarantees .act-buttons {
+    width: 100%;
+  }
+
+  .faq-question {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 65.625em) {
+  :root {
+    --font-size-a: clamp(1.5rem, 1vw + 1rem, 2.5rem);
+    --shadow: 10px 10px black;
+    --border: 3px solid black;
+    --font-size-p: clamp(.75rem, 1vw + .35rem, 2.5rem);
+    --margin-left-right: min(6rem, 2%);
+    --font-size-question: 1.75rem;
+    --margin-top: 10rem;
+    --font-size-big-screen: 3.5rem;
+  }
+
+  .act-buttons {
+    padding: 1.2em;
+  }
+  
+  .question1 {
+    justify-content: space-between;
+    margin-top: var(--margin-top);
+    padding-bottom: 1rem;
+  }
+
+  .question1 article {
+    max-width: 50%;
+    text-align: start;
+    margin-left: var(--margin-left-right);
+  }
+
+  .question1 img {
+    margin-right: var(--margin-left-right);
+  }
+
+  .question1 h2,
+  .question1 p {
+    text-align: start;
+  }
+  
+  .question1 h2 {
+    font-size: var(--font-size-question);
+  }
+
+  .question2 {
+    width: 100%;
+  }
+
+  .question2 h2 {
+    font-size: var(--font-size-question);
+  }
+
+  .reason-cards {
+    flex-wrap: wrap;
+    align-items: inherit;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
+
+  .reason-cards .cards {
+    margin-left: 2.5rem;
+  }
+
+  .reason-cards h3 {
+    font-size: var(--font-size-p);
+  }
+
+  .reason-cards p {
+    font-size: 1rem;
+  }
+
+  .question3 h2 {
+    font-size: var(--font-size-question);
+    width: 50%;
+  }
+
+  .question3 .text h3 {
+    font-size: 2.5rem;
+  }
+
+  .question3 {
+    margin-top: var(--margin-top);
+    margin-inline: 3rem;
+  }
+
+  .question3 .text {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    min-height: 12rem;
+  }
+
+  .question3 .text p {
+    width: 48ch;
+    text-align: start;
+    font-size: var(--font-size-p);
+  }
+
+  .question3 .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+  }
+
+  .question3 .top p {
+    font-size: var(--font-size-p);
+    max-width: 50ch;
+  }
+
+  .question3 .v-line {
+    height: 10rem;
+    margin: 0;
+    width: 2px;
+  }
+
+  .last-work {
+    margin-top: var(--margin-top);
+  }
+
+  .last-work h2 {
+    font-size: var(--font-size-big-screen);
+  }
+
+  .last-work .logo {
+    padding: 6em 8em;
+    margin: 6rem 0;
+  }
+
+  .last-work .options a {
+    font-size: 2.5rem;
+  }
+
+  .guarantees {
+    margin-top: var(--margin-top);
+    width: 100%;
+  }
+
+  .guarantees-title {
+    margin-top: 3rem;
+  }
+
+  .guarantees h2 {
+    font-size: var(--font-size-big-screen);
+  }
+
+  .guarantees .before-line {
+    width: 5%;
+  }
+
+  .guarantees .blocks {
+    margin-top: 2rem;
+    width: 90%;
+    flex-direction: row;
+    align-items: unset;
+    justify-content: space-evenly;
+  }
+
+  .guarantees .card h3 {
+    font-size: 1.75rem;
+    margin-top: 1.625rem;
+    margin-bottom: 2.625rem;
+  }
+
+  .blocks p {
+    font-size: var(--font-size-p);
+    width: 25ch;
+  }
+
+  .blocks .card {
+    width: 20rem;
+    padding: 1.5em;
+  }
+
+  .guarantees .act-buttons {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .process {
+    margin-top: var(--margin-top);
+    width: 100%;
+  }
+
+  .process h2 {
+    font-size: var(--font-size-big-screen);
+    align-self: flex-start;
+    margin-left: var(--margin-left-right);
+    margin-bottom: 4.5rem;
+  }
+
+  .process h3 {
+    font-size: 2.5rem;
+    padding: 0.1em 0.2em;
+    margin-bottom: 1rem;
+  }
+
+  .process p {
+    font-size: var(--font-size-p);
+    font-weight: 700;
+  }
+
+  .process .step {
+    margin-bottom: 3rem;
+    flex-direction: row;
+  }
+
+  .process .text {
+    align-items: flex-start;
+    max-width: 60ch;
+    text-align: left;
+  }
+
+  .process .number {
+    font-size: 6rem;
+    margin-right: 1.5rem;
+  }
+
+  .send-email {
+    margin-top: var(--margin-top);
+  }
+
+  .send-email h2 {
+    font-size: var(--font-size-big-screen);
+  }
+
+  .send-email .email-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .send-email form {
+    max-width: 30%;
+    margin-right: 0;
+    margin-left: 3rem;
+  }
+
+  .send-email form label,
+  .send-email form button {
+    font-size: 1.5rem;
+  }
+
+  .send-email input,
+  .send-email textarea {
+    font-size: var(--font-size-p);
+    margin-top: .5rem;
+    margin-bottom: .8rem;
+  }
+
+  .send-email form button {
+    margin-inline: unset;
+  }
+
+  .info {
+    width: 50%;
+    margin-right: 3rem;
+    justify-content: space-between;
+    padding-bottom: 1.5rem;
+    padding-right: 1em;
+  }
+
+  .info h3 {
+    font-size: 1.5rem;
+  }
+
+  .info h3:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .contact-container {
+    align-self: flex-start;
+    padding: 0.5em;
+    align-items: flex-start;
+  }
+
+  .letters {
+    width: 100%;
+    align-self: flex-end;
+  }
+
+  .faq {
+    margin-top: 6rem;
+  }
+
+  .faq h2 {
+    font-size: var(--font-size-big-screen);
+  }
+
+  .faq-question {
+    margin-bottom: 2%;
+    padding: 1.2em 1em;
+  }
+
+  .question h3 {
+    font-size: 1.5rem;
+  }
+
+  .answer p {
+    font-size: var(--font-size-p);
+  }
+
+  footer {
+    font-size: var(--font-size-p);
+  }
+}
+
+
+@media (min-width: 100em) {
+  :root {
+    --font-size-big-screen: 6rem;
+    --margin-left-right: 6rem;
+    --margin-top: 12rem;
+    --font-size-question: 3rem;
+  }
+
+  .upper-note {
+    margin-bottom: 7.5%;
+    margin-left: 6rem;
+    margin-top: 1rem;
+  }
+
+  header .act-buttons {
+    margin-top: 7rem;
+  }
+
+  .question1 {
+    width: 100%;
+  }
+
+  .question1 article p {
+    font-size: var(--font-size-p);
+    max-width: 55ch;
+    margin-top: 1rem;
+  }
+
+  .question1 img {
+    height: 21rem;
+  }
+
+
+  .question2 h2 {
+    margin: 2rem auto;
+  }
+
+
+  .question3 .text h3 {
+    font-size: 3.655rem;
+  }
+
+  .question3 {
+    margin-top: var(--margin-top);
+    margin-inline: 6rem;
+  }
+
+  .question3 .text {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    min-height: 20rem;
+  }
+
+  .question3 .top {
+    padding: 2em 3em;
+  }
+
+  .last-work .logo {
+    padding: 8em 10em;
+  }
+
+  .last-work .options a {
+    font-size: 3.5rem;
+  }
+
+  .guarantees .blocks {
+    margin-top: 5rem;
+  }
+
+  .guarantees .card h3 {
+    font-size: 2.625rem;
+    margin-top: 1.625rem;
+    margin-bottom: 2.625rem;
+  }
+
+  .blocks .card {
+    width: max(25%, 28rem);
+    padding: 2em;
+  }
+
+  .guarantees .act-buttons {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+  }
+
+  .process h2 {
+    margin-left: 6rem;
+    margin-bottom: 6rem;
+  }
+
+  .process h3 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .process .step {
+    margin-bottom: 4rem;
+  }
+
+  .process .text {
+    max-width: 72ch;
+  }
+
+  .process .number {
+    font-size: 9.5rem;
+    margin-right: 2rem;
+  }
+
+  .send-email .email-container {
+    margin-bottom: 3rem;
+  }
+
+  .send-email form {
+    max-width: 25%;
+    margin-left: 6rem;
+  }
+
+  .send-email form label,
+  .send-email form button {
+    font-size: 2.25rem;
+  }
+
+  .send-email input,
+  .send-email textarea {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .info {
+    width: 55%;
+    margin-right: 6rem;
+  }
+
+  .info h3 {
+    font-size: 2.25rem;
+  }
+
+  .question h3 {
+    font-size: 2.25rem;
+  }
+
 }
