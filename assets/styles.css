@@ -508,6 +508,7 @@ main {
   border: var(--border);
   box-shadow: var(--shadow);
   margin-bottom: 2rem;
+  margin-inline: 1rem;
   text-align: center;
 }
 
@@ -748,7 +749,7 @@ footer {
     --font-size-a: clamp(1.5rem, 1vw + 1rem, 2.5rem);
     --shadow: 10px 10px black;
     --border: 3px solid black;
-    --font-size-p: clamp(.75rem, 1vw + .35rem, 2.5rem);
+    --font-size-p: clamp(0.75rem, 1vw + 0.35rem, 2.5rem);
     --margin-left-right: min(6rem, 2%);
     --font-size-question: 1.75rem;
     --margin-top: 10rem;
@@ -758,7 +759,7 @@ footer {
   .act-buttons {
     padding: 1.2em;
   }
-  
+
   .question1 {
     justify-content: space-between;
     margin-top: var(--margin-top);
@@ -779,7 +780,7 @@ footer {
   .question1 p {
     text-align: start;
   }
-  
+
   .question1 h2 {
     font-size: var(--font-size-question);
   }
@@ -990,8 +991,8 @@ footer {
   .send-email input,
   .send-email textarea {
     font-size: var(--font-size-p);
-    margin-top: .5rem;
-    margin-bottom: .8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.8rem;
   }
 
   .send-email form button {
@@ -1051,7 +1052,6 @@ footer {
   }
 }
 
-
 @media (min-width: 100em) {
   :root {
     --font-size-big-screen: 6rem;
@@ -1084,11 +1084,9 @@ footer {
     height: 21rem;
   }
 
-
   .question2 h2 {
     margin: 2rem auto;
   }
-
 
   .question3 .text h3 {
     font-size: 3.655rem;
@@ -1180,7 +1178,6 @@ footer {
     margin-bottom: 1.5rem;
   }
 
-
   .info {
     width: 55%;
     margin-right: 6rem;
@@ -1193,5 +1190,94 @@ footer {
   .question h3 {
     font-size: 2.25rem;
   }
+}
 
+@media (min-width: 187.5em) {
+  :root {
+    --font-size-big-screen: 12rem;
+    --margin-left-right: 12rem;
+    --margin-top: 20rem;
+    --font-size-question: 6rem;
+    --font-size-a: 3.5rem;
+    --shadow: 15px 15px black;
+  }
+
+  .upper-note {
+    font-size: 2.5rem;
+  }
+
+  .question2 .cards h3 {
+    font-size: 2.5rem;
+  }
+
+  .question2 .cards {
+    margin-left: 5rem;
+  }
+
+  .question2 .reason-cards p {
+    font-size: 1.75rem;
+  }
+
+  .question2 .reason-cards {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+
+  .question2 h3 {
+    margin: 1.75rem 0;
+  }
+
+  .question2 img {
+    height: 5rem;
+  }
+
+  .question3 {
+    margin-inline: 40rem;
+  }
+
+  .question3 .text {
+    min-height: 45rem;
+  }
+
+  .question3 .text h3 {
+    font-size: 6rem;
+  }
+
+  .last-work .logo {
+    padding: 16em 22em;
+  }
+
+  .process .text {
+    max-width: 102ch;
+  }
+
+  .process .number {
+    font-size: 15rem;
+  }
+
+  .process h3 {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .process .step {
+    margin-bottom: 8rem;
+  }
+
+  .send-email {
+    width: 100%;
+  }
+
+  .question h3 {
+    font-size: 4rem;
+  }
+
+  .plus, .minus {
+    width: 3.5rem;
+  }
+
+  .faq-question {
+    margin-bottom: 2%;
+    padding: 2.4em 2em;
+  }
 }
